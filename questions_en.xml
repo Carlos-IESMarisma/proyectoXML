@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE test SYSTEM "quiz.dtd">
+
+<!-- XML document in English — 20 questions about XML and DTD -->
+<test>
+
+  <question id="en_q1">
+    <wording>What does XML stand for?</wording>
+    <choices>
+      <choice correct="yes">eXtensible Markup Language</choice>
+      <choice correct="no">Extra Modern Language</choice>
+      <choice correct="no">eXtended Machine Logic</choice>
+      <choice correct="no">Extensible Management Layer</choice>
+    </choices>
+  </question>
+
+  <question id="en_q2">
+    <wording>Which of the following is NOT a rule for a well-formed XML document?</wording>
+    <choices>
+      <choice correct="no">Every opening tag must have a closing tag</choice>
+      <choice correct="no">Tags are case-sensitive</choice>
+      <choice correct="yes">Every document must have a DTD</choice>
+      <choice correct="no">There must be exactly one root element</choice>
+    </choices>
+  </question>
+
+  <question id="en_q3">
+    <wording>What does DTD stand for?</wording>
+    <choices>
+      <choice correct="no">Data Transfer Document</choice>
+      <choice correct="no">Dynamic Type Definition</choice>
+      <choice correct="yes">Document Type Definition</choice>
+      <choice correct="no">Default Tag Declaration</choice>
+    </choices>
+  </question>
+
+  <question id="en_q4">
+    <wording>Which DTD declaration defines an element with text content only?</wording>
+    <choices>
+      <choice correct="no">&lt;!ELEMENT name EMPTY&gt;</choice>
+      <choice correct="yes">&lt;!ELEMENT name (#PCDATA)&gt;</choice>
+      <choice correct="no">&lt;!ELEMENT name ANY&gt;</choice>
+      <choice correct="no">&lt;!ELEMENT name (child)&gt;</choice>
+    </choices>
+  </question>
+
+  <question id="en_q5">
+    <wording>In a DTD, what does the '+' symbol after an element mean?</wording>
+    <choices>
+      <choice correct="no">The element is optional</choice>
+      <choice correct="no">The element appears exactly once</choice>
+      <choice correct="yes">The element appears one or more times</choice>
+      <choice correct="no">The element appears zero or more times</choice>
+    </choices>
+  </question>
+
+  <question id="en_q6">
+    <wording>Which attribute type in a DTD guarantees a unique value across the document?</wording>
+    <choices>
+      <choice correct="no">CDATA</choice>
+      <choice correct="no">NMTOKEN</choice>
+      <choice correct="yes">ID</choice>
+      <choice correct="no">IDREF</choice>
+    </choices>
+  </question>
+
+  <question id="en_q7">
+    <wording>What is the correct XML processing instruction?</wording>
+    <choices>
+      <choice correct="yes">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</choice>
+      <choice correct="no">&lt;xml version="1.0"&gt;</choice>
+      <choice correct="no">&lt;!xml version="1.0"&gt;</choice>
+      <choice correct="no">//xml version 1.0</choice>
+    </choices>
+  </question>
+
+  <question id="en_q8">
+    <wording>How are comments written in XML?</wording>
+    <choices>
+      <choice correct="no">// This is a comment</choice>
+      <choice correct="no">/* This is a comment */</choice>
+      <choice correct="yes">&lt;!-- This is a comment --&gt;</choice>
+      <choice correct="no"># This is a comment</choice>
+    </choices>
+  </question>
+
+  <question id="en_q9">
+    <wording>What does IDREF do in a DTD?</wording>
+    <choices>
+      <choice correct="no">Defines a unique identifier</choice>
+      <choice correct="yes">References the value of an ID attribute in another element</choice>
+      <choice correct="no">Allows any text value</choice>
+      <choice correct="no">Sets a default value</choice>
+    </choices>
+  </question>
+
+  <question id="en_q10">
+    <wording>In a DTD, which symbol means an element is optional (0 or 1 time)?</wording>
+    <choices>
+      <choice correct="no">+</choice>
+      <choice correct="no">*</choice>
+      <choice correct="yes">?</choice>
+      <choice correct="no">!</choice>
+    </choices>
+  </question>
+
+  <question id="en_q11">
+    <wording>What is a well-formed XML document?</wording>
+    <choices>
+      <choice correct="no">A document that has an associated DTD</choice>
+      <choice correct="no">A document validated by an XSD schema</choice>
+      <choice correct="yes">A document that follows the basic syntactic rules of XML</choice>
+      <choice correct="no">A document with at least one attribute per element</choice>
+    </choices>
+  </question>
+
+  <question id="en_q12">
+    <wording>Which DTD declaration allows an attribute to take one of several specific values?</wording>
+    <choices>
+      <choice correct="no">CDATA</choice>
+      <choice correct="yes">An enumerated list of values in parentheses separated by |</choice>
+      <choice correct="no">NMTOKENS</choice>
+      <choice correct="no">ENTITIES</choice>
+    </choices>
+  </question>
+
+  <question id="en_q13">
+    <wording>What does PCDATA stand for in XML?</wording>
+    <choices>
+      <choice correct="no">Parsed Complex Data Attribute</choice>
+      <choice correct="yes">Parsed Character DATA</choice>
+      <choice correct="no">Primary Content Data Area</choice>
+      <choice correct="no">Processing Conditional Data Action</choice>
+    </choices>
+  </question>
+
+  <question id="en_q14">
+    <wording>Can an attribute name be repeated in the same XML opening tag?</wording>
+    <choices>
+      <choice correct="no">Yes, if the values are different</choice>
+      <choice correct="no">Yes, if the DTD allows it</choice>
+      <choice correct="yes">No, the XML 1.0 standard forbids it</choice>
+      <choice correct="no">Yes, in XML 2.0 it is valid</choice>
+    </choices>
+  </question>
+
+  <question id="en_q15">
+    <wording>Which language is used to transform XML into HTML?</wording>
+    <choices>
+      <choice correct="no">XPath</choice>
+      <choice correct="no">XSD</choice>
+      <choice correct="yes">XSLT</choice>
+      <choice correct="no">XQuery</choice>
+    </choices>
+  </question>
+
+  <question id="en_q16">
+    <wording>Which predefined entity represents the '&gt;' symbol in XML?</wording>
+    <choices>
+      <choice correct="no">&amp;lt;</choice>
+      <choice correct="no">&amp;amp;</choice>
+      <choice correct="yes">&amp;gt;</choice>
+      <choice correct="no">&amp;apos;</choice>
+    </choices>
+  </question>
+
+  <question id="en_q17">
+    <wording>What is XPath?</wording>
+    <choices>
+      <choice correct="no">A language for defining XML schemas</choice>
+      <choice correct="yes">A language for navigating the structure of an XML document</choice>
+      <choice correct="no">An XML transformation language</choice>
+      <choice correct="no">An extension of HTML for structured data</choice>
+    </choices>
+  </question>
+
+  <question id="en_q18">
+    <wording>How is an external DTD linked to an XML document?</wording>
+    <choices>
+      <choice correct="no">&lt;!DOCTYPE test INCLUDE "quiz.dtd"&gt;</choice>
+      <choice correct="yes">&lt;!DOCTYPE test SYSTEM "quiz.dtd"&gt;</choice>
+      <choice correct="no">&lt;!DOCTYPE test LINK "quiz.dtd"&gt;</choice>
+      <choice correct="no">&lt;?dtd href="quiz.dtd"?&gt;</choice>
+    </choices>
+  </question>
+
+  <question id="en_q19">
+    <wording>What is the main difference between DTD and XSD?</wording>
+    <choices>
+      <choice correct="no">There is no difference, they are synonyms</choice>
+      <choice correct="no">DTD is more modern than XSD</choice>
+      <choice correct="yes">XSD is written in XML and provides richer data types than DTD</choice>
+      <choice correct="no">XSD only works with HTML</choice>
+    </choices>
+  </question>
+
+  <question id="en_q20">
+    <wording>What does the '*' symbol after an element mean in a DTD?</wording>
+    <choices>
+      <choice correct="no">The element is mandatory and appears once</choice>
+      <choice correct="no">The element appears one or more times</choice>
+      <choice correct="yes">The element appears zero or more times</choice>
+      <choice correct="no">The element is read-only</choice>
+    </choices>
+  </question>
+
+</test>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concurso XML &amp; DTD</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Hoja de estilos propia -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       CABECERA — título + selector de idioma
+  ══════════════════════════════════════════════════ -->
+  <header>
+    <h1 id="app-title">🧠 Concurso XML &amp; DTD</h1>
+
+    <div class="lang-btns">
+      <button class="lang-btn active" data-lang="es">🇪🇸 Español</button>
+      <button class="lang-btn"        data-lang="en">🇬🇧 English</button>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════
+       PANTALLA DE INICIO
+  ══════════════════════════════════════════════════ -->
+  <section id="start-screen">
+    <h2 id="start-title">¿Cuánto sabes de XML?</h2>
+    <p  id="start-desc">
+      Responde 20 preguntas sobre XML y DTD.<br>
+      Tienes todo el tiempo que necesites.<br>
+      ¡Buena suerte!
+    </p>
+    <button class="start-btn" id="start-btn">Comenzar</button>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       LOADER — se muestra mientras se carga el XML
+  ══════════════════════════════════════════════════ -->
+  <div id="loader">
+    <div class="spinner"></div>
+    <p>Cargando preguntas…</p>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════
+       PANTALLA DEL QUIZ
+  ══════════════════════════════════════════════════ -->
+  <section id="quiz-screen">
+
+    <!-- Barra de estado: progreso · reloj · puntuación -->
+    <div class="status-bar">
+      <span id="progress-text" class="progress-text">Pregunta 1 de 20</span>
+
+      <div class="timer">
+        <span>⏱</span>
+        <span id="timer-display">00:00</span>
+      </div>
+
+      <div class="score-badge" id="score-badge">Puntos: 0</div>
+    </div>
+
+    <!-- Barra de progreso visual -->
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-fill" id="progress-fill" style="width:0%"></div>
+    </div>
+
+    <!-- Tarjeta de pregunta -->
+    <div class="question-card">
+      <p  class="question-num"  id="q-num">Pregunta 1</p>
+      <p  class="question-text" id="q-text">Texto de la pregunta</p>
+
+      <!-- Opciones de respuesta (se generan dinámicamente) -->
+      <div class="choices" id="choices"></div>
+
+      <!-- Feedback tras responder -->
+      <div class="feedback" id="feedback"></div>
+
+      <!-- Botón siguiente / ver resultados -->
+      <button id="next-btn">Siguiente →</button>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════
+       PANTALLA DE RESULTADOS
+  ══════════════════════════════════════════════════ -->
+  <section id="results-screen">
+    <div class="result-card">
+
+      <div class="result-emoji" id="res-emoji">🏆</div>
+      <h2 class="result-title" id="res-title">¡Perfecto!</h2>
+      <p  class="result-sub"   id="res-sub">Has acertado 20 de 20 preguntas</p>
+
+      <!-- Estadísticas -->
+      <div class="result-stats">
+
+        <div class="stat-box" id="res-score">
+          <div class="stat-value">0/20</div>
+          <div class="stat-label">Puntuación</div>
+        </div>
+
+        <div class="stat-box" id="res-time">
+          <div class="stat-value">00:00</div>
+          <div class="stat-label">Tiempo</div>
+        </div>
+
+        <div class="stat-box" id="res-pct">
+          <div class="stat-value">0%</div>
+          <div class="stat-label">Aciertos</div>
+        </div>
+
+      </div>
+
+      <!-- Barra de puntuación animada -->
+      <div class="score-bar-wrap">
+        <div class="score-bar-fill" id="res-bar" style="width:0%"></div>
+      </div>
+
+      <button class="replay-btn" id="replay-btn">Volver a jugar</button>
+    </div>
+  </section>
+
+  <!-- Script principal — al final del body para no bloquear el render -->
+  <script src="js/quiz.js"></script>
+
+</body>
+</html>
