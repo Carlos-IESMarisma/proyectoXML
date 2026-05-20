@@ -152,7 +152,7 @@ function stopTimer() {
  *   </test>
  */
 function loadQuestions(callback) {
-  const file = `xml/questions_${lang}.xml`;
+  const file = `questions_${lang}.xml`;
 
   /* Mostrar loader */
   elStartScreen.style.display  = 'none';
